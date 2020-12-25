@@ -1,0 +1,49 @@
+<html>
+<head>
+<script>
+    function header()
+    {
+        var elem=document.getElementById("outputlabel")
+        elem.innerHTML="Hello world from script function"
+    }
+    function stylechange()
+    {
+        var elem=document.getElementById("but");
+        elem.style.color="crimson"
+        elem.style.backgroundColor="cadetblue"
+        elem.style.fontSize="21 px"
+    }
+</script>
+<style>
+.but
+{
+  color:brown;
+  font-size:21px;
+  margin-right:40px;
+  margin-top:100px;
+  width:20%;
+  background-color:cornflowerblue;
+}
+.but:hover{
+    background-color: cadetblue;
+    color:crimson;
+    font-weight:bold;
+    font-size:21px;
+}
+label {
+    margin-top:100px;
+    margin-right:40px;
+    border:2px solid;
+    width:auto;
+    height:20%;
+    font-size:21px;
+}
+</style>
+<body>
+<center>
+<label>JAVASCRIPT HANDLING</label>
+<button class="but" onclick="header()" onmouseover="stylechange()">Connect</button>
+<label id="outputlabel" name="outputlabel">Display Text</label>
+</center>
+</body>
+</head>
