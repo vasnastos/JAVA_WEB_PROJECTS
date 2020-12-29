@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>PRODUCT SYSTEM</title>
+<style>
+label
+{
+  margin-right:40px;
+  color:red;
+  border-radius:10px;
+  text-decoration:null;
+}
+.but
+{
+  color:purple;
+  background-color:white;
+  font-size:14px;
+}
+
+table
+{
+  margin-bottom:40px;
+  border:collapse;
+  border:null;
+  text-align:center;
+}
+
+.input
+{
+ border:2px solid;
+ margin-bottom:35px;
+}
+</style>
+<script>
+function over()
+{
+	documnet.getElementById("sub").style.color="red";
+	document.getElementById("sub").style.backgroundcolor="lightgray"
+}
+function out()
+{
+	documnet.getElementById("sub").style.color="purple";
+	document.getElementById("sub").style.backgroundcolor="white"
+}
+
+</script>
+</head>
+<body>
+<div style="text-align:center;">
+<form action=insertproduct method="post">
+<center>
+<table>
+<tr>
+<th></th>
+<th></th>
+</tr>
+<tr>
+<td><label>ID</label></td>
+<td><input type="text" class="input" name="id"/></td></tr>
+<tr><td><label>NAME</label></td>
+<td><input type="text" class="input" name="name"/></td></tr>
+<tr><td><label>PRICE</label></td>
+<td><input type="text" class="input" name="price"/></td></tr>
+</table>
+</center>
+<input type="submit" class="but" onmouseover="over()" onmouseout="out" name="sub" id="sub"/>
+</form>
+</div>
+</body>
+</html>
