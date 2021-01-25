@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>CALCULATOR</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <center>
+            <h2>Calculator App</h2>
+            <hr style="border-top:2px brown;"/>
+                <h:panelGrid columns="2"/>
+                <h:form>
+                <h:outputLabel value="Δώσε πρώτο αριθμό:" style="color:red; font-weight:bold; font-size:15px;"/>
+                <h:inputText value="#{numberManagedBean.n1}"/>
+                <br/>
+                <h:outputLabel value="Δώσε δεύτερο αριθμο:" style="color:red; font-weight:bold; font-size:15px;"/>
+                <h:inputText value="#{numberManagedBean.n2}"/>
+                <br/>
+                <h:outputLabel value="Επιλογή τελεστή:"/>
+                <h:selectOneMenu value="#{numberManagedBean.op}">
+                <f:selectItem itemLabel="--ΤΕΛΕΣΤΗΣ--" itemValue="#" noSelectionOption="true"/>
+                <f:selectItems value="#{numberManagedBean.items}" var="temp" itemLabel="#{temp.label}" itemValue="#{temp.value}"/>
+                </h:selectOneMenu>
+                <br/>
+                <h:commandButton action="#{numberManagedBean.clear()}" value="Καθαρισμός"/>
+                <h:commandButton action="#{numberManagedBean.calculate}" value="Υπολογισμός"/>
+                </h:form>
+        </center>
+    </h:body>
+</html>
