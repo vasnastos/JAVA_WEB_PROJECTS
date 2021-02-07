@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Calculator</title>
+    <style>
+        label{
+            margin-left:100px;
+            color:brown;
+            font-weight:bold;
+            font-size:16px;
+            text-decoration: underline;
+            text-align: center;
+        }
+        table{
+            border-collapse: collapse;
+            width:20%;
+        }
+        td{
+            width:10px;
+        }
+        .but
+        {
+            margin-left:100px;
+            color:crimson;
+            background-color: azure;
+        }
+        .but:hover{
+            color:darkgray;
+            background-color: darkgreen;
+        }
+        .but1
+        {
+            color:crimson;
+            background-color: azure;
+        }
+        .but1:hover{
+            color:darkgray;
+            background-color: darkgreen;
+        }
+    </style>
+    </head>
+    <body>
+        <center>
+        <h3>This a simple Javascript Calculator</h3>
+        <hr>
+        <table>
+            <tr>
+                <td><label>1 Αριθμός</label></td>
+                <td><input type="text" id="num1"/></td>
+            </tr>
+            <tr>
+                <td><label>2 Αριθμός</label></td>
+                <td><input type="text" id="num2"/></td>
+            </tr>
+            <tr>
+                <td><button id="add" class="but">ΠΡΟΣΘΕΣΗ</button></td>
+                <td><button id="min" class="but1">ΑΦΑΙΡΕΣΗ</button></td>
+                <td><button id="mul" class="but1">ΠΟΛΛΑΠΛΑΣΙΑΣΜΟΣ</button></td>
+                <td><button id="div" class="but1">ΔΙΑΙΡΕΣΗ</button>
+            </tr>
+            </table>        
+    </center>
+    <script>
+        document.getElementById("add").addEventListener("click",function(){
+            var n1=document.getElementById("num1").value;
+            var n2=document.getElementById("num2").value;
+            var res=parseFloat(n1)+parseFloat(n2);
+            alert('Το Αποτελεσμα της Πραξης'+n1+"+"+n2+"="+res);
+        },true); 
+        document.getElementById("min").addEventListener("click",function()
+        {
+            var n1=document.getElementById("num1").value;
+            var n2=document.getElementById("num2").value;
+            var res=parseFloat(n1)-parseFloat(n2);
+            alert('Το Αποτελεσμα της Πραξης'+n1+"-"+n2+"="+res);
+        },true);
+        document.getElementById("mul").addEventListener("click",function(){
+            var n1=document.getElementById("num1").value;
+            var n2=document.getElementById("num2").value;
+            var res=parseFloat(n1)*parseFloat(n2);
+            alert('Το αποτέλεσμα της πράξης '+n1+'*'+n2+"="+res);
+        },true);
+        document.getElementById("div").addEventListener("click",function()
+        {
+            var n1=document.getElementById("num1").value;
+            var n2=document.getElementById("num2").value;
+            if(parseFloat(n2)==0)
+            {
+                alert('Can not div with the second part=0');
+                return;
+            }
+            var res=parseFloat(n1)/parseFloat(n2);
+            alert('Το Αποτέλεσμα της πράξης '+n1+'/'+n2+'='+res);
+        },true);
+    </script>
+</body>
+    </html>

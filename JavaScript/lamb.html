@@ -1,0 +1,39 @@
+<html>
+    <head>
+      <title>ΑΝΟΙΓΜΑ-ΚΛΕΙΣΙΜΟ ΛΑΜΠΑΣ</title>
+      <style>
+          .but
+        {
+            margin-left:100px;
+            margin-right:250px;
+            color:crimson;
+            background-color: azure;
+        }
+        .but:hover{
+            color:darkgray;
+            background-color: darkgreen;
+        }
+      </style>
+    </head>
+    <body>
+        <center>
+        <button id="status" class="but">OPEN</button>
+        <img id="lam" src="https://previews.123rf.com/images/pixelrobot/pixelrobot1504/pixelrobot150400921/38251282-100-watt-light-bulb-off-isolated-on-white-background-.jpg" width="100px;" height="100px;"/>
+        </center>
+        <script>
+            document.getElementById("status").addEventListener("click",function()
+            {
+                if(document.getElementById("status").textContent=="OPEN")
+                {
+                    document.getElementById("status").innerHTML="CLOSE";
+                    document.getElementById("lam").src="https://previews.123rf.com/images/dvarg/dvarg1203/dvarg120300019/12676347-light-filament-lamp-on-a-white-background-illustration-for-design.jpg";
+                }
+                else if(document.getElementById("status").textContent=="CLOSE")
+                {
+                    document.getElementById("status").innerHTML="OPEN";
+                    document.getElementById("lam").src="https://previews.123rf.com/images/pixelrobot/pixelrobot1504/pixelrobot150400921/38251282-100-watt-light-bulb-off-isolated-on-white-background-.jpg";
+                }
+            },true);
+        </script>
+    </body>
+    </html>
