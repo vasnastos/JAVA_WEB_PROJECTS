@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Github Buttons</title>
+        <style>
+           button
+           {
+               background-color:burlywood;
+               color:blue;
+               font-size:14px;
+               text-decoration:underline;
+           } 
+        </style>
+        <script>
+            function hover()
+            {
+                document.getElementById("gb").style.backgroundColor="red";
+                document.getElementById("gb").style.color="white";
+            }
+            function out()
+            {
+                document.getElementById("gb").style.backgroundColor="burlywood";
+                document.getElementById("gb").style.color="blue";
+            }
+        </script>
+        </head>
+        <body>
+            <center>
+            <h2><u>Github Button</u></h2><hr>
+            <a href="https://github.com/vasnastos" target="_blank"><button id="gb" onmouseover="hover()" onmouseout="out()">Github</button></a>
+            
+            </center>
+        </body>
+        </html>
